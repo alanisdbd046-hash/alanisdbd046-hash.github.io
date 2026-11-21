@@ -3,112 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alan | Backend & Systems Developer Portfolio</title>
+  <title>Alan | Backend & Systems Developer</title>
   <style>
-    :root { --bg: #0b0e14; --card: #131822; --border: #232b3a; --accent: #38bdf8; --accent2: #facc15; --text: #e2e8f0; --muted: #94a3b8; }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    body { background: var(--bg); color: var(--text); line-height: 1.65; }
-    nav { position: sticky; top: 0; background: rgba(11,14,20,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; max-width: 960px; margin: 0 auto; }
-    nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 0.92rem; font-weight: 500; }
-    nav a:hover { color: var(--accent); }
-    .brand { color: #fff; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.5px; }
-    main { max-width: 960px; margin: 0 auto; padding: 36px 24px 72px; }
-    .hero { padding: 36px 0 44px; border-bottom: 1px solid var(--border); }
-    .tag { display: inline-block; background: rgba(56,189,248,0.12); color: var(--accent); border: 1px solid rgba(56,189,248,0.3); padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; margin-bottom: 14px; }
-    h1 { font-size: 2.4rem; color: #fff; margin-bottom: 12px; }
-    .hero p { color: var(--muted); max-width: 680px; font-size: 1.05rem; margin-bottom: 22px; }
-    .btns a { display: inline-block; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.92rem; margin-right: 10px; }
-    .btn-primary { background: var(--accent); color: #0b0e14; }
-    .btn-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
-    section { margin-top: 44px; }
-    h2 { font-size: 1.45rem; color: #fff; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
-    .card h3 { color: #fff; font-size: 1.12rem; margin-bottom: 8px; }
-    .card p { color: var(--muted); font-size: 0.93rem; margin-bottom: 14px; }
-    .pills span { display: inline-block; background: #0b0e14; border: 1px solid var(--border); color: var(--accent2); font-size: 0.78rem; padding: 3px 9px; border-radius: 6px; margin: 0 6px 6px 0; }
-    pre { background: #080a0f; border: 1px solid var(--border); border-radius: 10px; padding: 16px; overflow-x: auto; font-size: 0.85rem; color: #cbd5e1; margin-top: 12px; }
-    footer { text-align: center; color: var(--muted); font-size: 0.86rem; margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); }
+    body { font-family: system-ui, sans-serif; background: #0b0e14; color: #e2e8f0; max-width: 920px; margin: 0 auto; padding: 24px; line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid #232b3a; margin-bottom: 32px; }
+    nav a { color: #94a3b8; text-decoration: none; margin-left: 16px; font-weight: 600; }
+    h1 { font-size: 2.2rem; color: #fff; margin-bottom: 10px; }
+    h2 { font-size: 1.4rem; color: #38bdf8; margin: 36px 0 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background: #131822; border: 1px solid #232b3a; border-radius: 12px; padding: 20px; }
+    .card h3 { color: #facc15; margin-bottom: 8px; }
+    .tag { display: inline-block; background: #0b0e14; border: 1px solid #232b3a; padding: 2px 8px; border-radius: 6px; font-size: 0.78rem; margin: 4px 4px 0 0; }
+    button { background: #1e293b; color: #fff; border: 1px solid #38bdf8; padding: 8px 14px; border-radius: 8px; margin: 0 8px 12px 0; cursor: pointer; }
+    pre { background: #06080d; border: 1px solid #232b3a; padding: 14px; border-radius: 10px; overflow-x: auto; font-size: 0.85rem; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #232b3a; color: #94a3b8; text-align: center; }
   </style>
 </head>
 <body>
   <nav>
-    <div class="brand">alanisdbd046-hash</div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <strong>alanisdbd046-hash</strong>
+    <div><a href="#projects">Projects</a><a href="#sandbox">API Sandbox</a><a href="#skills">Skills</a><a href="#notes">Notes</a><a href="#contact">Contact</a></div>
   </nav>
 
-  <main>
-    <div class="hero" id="about">
-      <div class="tag">Backend &amp; Systems Developer</div>
-      <h1>Hi, I'm Alan — Software &amp; Network Engineer</h1>
-      <p>I build lightweight REST APIs, relational database schemas, reverse-proxy tunnels, and mobile client-server protocols in PHP, Python, SQL, and Linux environments.</p>
-      <div class="btns">
-        <a class="btn-primary" href="https://github.com" target="_blank">GitHub Profile</a>
-        <a class="btn-secondary" href="#projects">Explore Projects</a>
-      </div>
-    </div>
+  <h1>Alan &mdash; Backend &amp; Systems Developer</h1>
+  <p>I build lightweight REST APIs, relational MariaDB schemas, Linux ARM64 reverse-proxy tunnels, and binary inspection tools in PHP, Python, and SQL.</p>
 
-    <section id="projects">
-      <h2>Featured Software Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Lemony REST API &amp; Auth Engine</h3>
-          <p>A modular PHP 8 &amp; MariaDB backend implementing token-based session authentication, rate-limited JSON endpoints, and dynamic feature-flag configuration.</p>
-          <div class="pills"><span>PHP 8</span><span>MariaDB</span><span>REST JSON</span><span>PDO</span></div>
-        </div>
-        <div class="card">
-          <h3>ARM64 Linux Tunnel &amp; Edge Router</h3>
-          <p>Automated reverse-proxy routing setup running on Android ARM64 Linux (Termux) with TLS termination, zero-trust edge ingress, and health monitoring.</p>
-          <div class="pills"><span>Linux ARM64</span><span>Cloudflared</span><span>TLS/HTTPS</span><span>Bash</span></div>
-        </div>
-        <div class="card">
-          <h3>HTTP Protocol &amp; Binary Patcher Toolkit</h3>
-          <p>Python automation utilities for inspecting bytecode, rewriting endpoint configurations, verifying TLS handshakes, and testing client-server payloads.</p>
-          <div class="pills"><span>Python 3</span><span>Bytecode</span><span>HTTP/2</span><span>Automation</span></div>
-        </div>
-      </div>
-    </section>
+  <h2 id="projects">Featured Software Projects</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Lemony Modular REST API</h3><p>PHP 8.3 microservice router with stateless session tokens, rate limiting, and MariaDB PDO persistence.</p><span class="tag">PHP 8</span><span class="tag">MariaDB</span><span class="tag">REST</span></div>
+    <div class="card"><h3>2. ARM64 QUIC Tunnel Router</h3><p>Zero-trust edge ingress daemon running on Android ARM64 Linux with TLS termination and CGNAT traversal.</p><span class="tag">Linux</span><span class="tag">Cloudflared</span><span class="tag">TLS</span></div>
+    <div class="card"><h3>3. Bytecode &amp; Manifest Patcher</h3><p>Python CLI pipeline for disassembling DEX bytecode, rewriting host configs, and signing release builds.</p><span class="tag">Python 3</span><span class="tag">Bytecode</span><span class="tag">CLI</span></div>
+    <div class="card"><h3>4. Relational Ledger Schema</h3><p>Normalized InnoDB schema with indexed foreign keys, atomic transactions, and audit logging.</p><span class="tag">SQL</span><span class="tag">InnoDB</span><span class="tag">ACID</span></div>
+    <div class="card"><h3>5. GitHub Device-Flow Client</h3><p>OAuth 2.0 device-flow automation tool using Python urllib to manage repository commits and Pages.</p><span class="tag">OAuth</span><span class="tag">GitHub API</span><span class="tag">Python</span></div>
+    <div class="card"><h3>6. HTTP/2 &amp; TLS Inspector</h3><p>Diagnostic shell suite verifying ALPN negotiation, SNI routing, and DNS records across edge nodes.</p><span class="tag">HTTP/2</span><span class="tag">DNS</span><span class="tag">Bash</span></div>
+  </div>
 
-    <section id="skills">
-      <h2>Technical Stack &amp; Architecture</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Backend &amp; Databases</h3>
-          <p>Designing normalized MySQL/MariaDB schemas, prepared PDO queries, stateless JSON APIs, and custom HTTP request routers.</p>
-          <div class="pills"><span>PHP</span><span>Python</span><span>MariaDB / SQL</span><span>REST</span></div>
-        </div>
-        <div class="card">
-          <h3>Networking &amp; DevOps</h3>
-          <p>Configuring DNS records (CNAME, A, TXT), Cloudflare Tunnels, reverse proxies, SSH port forwarding, and automated CI checks.</p>
-          <div class="pills"><span>DNS</span><span>Cloudflare</span><span>Git / GitHub</span><span>Linux</span></div>
-        </div>
-      </div>
-      <pre>// Example JSON Endpoint Response (/v1/status)
-{
-  "service": "rokone-api",
-  "runtime": "PHP 8.3 / MariaDB",
-  "protocol": "HTTPS/2",
-  "status": "operational"
-}</pre>
-    </section>
+  <h2 id="sandbox">Interactive API Sandbox</h2>
+  <div>
+    <button onclick="setEp('health')">GET /v1/health</button>
+    <button onclick="setEp('version')">GET /v1/version</button>
+    <button onclick="setEp('auth')">POST /v2/session</button>
+  </div>
+  <pre id="out"></pre>
 
-    <section id="contact">
-      <h2>Contact &amp; Links</h2>
-      <div class="card">
-        <p>Open to collaborating on backend APIs, Linux networking tools, and open-source software projects.</p>
-        <p><strong>GitHub:</strong> <a style="color:var(--accent)" href="https://github.com">://github.com</a><br/>
-        <strong>Email:</strong> alanisd046@gmail.com</p>
-      </div>
-    </section>
+  <h2 id="skills">Technical Skills</h2>
+  <div class="grid">
+    <div class="card"><h3>Backend &amp; Databases</h3><p>PHP 8, Python 3, MariaDB, MySQL, SQLite, PDO prepared statements, REST JSON design, and session security.</p></div>
+    <div class="card"><h3>Systems &amp; Networking</h3><p>Linux CLI, ARM64 process supervision, DNS (A, CNAME, TXT), Cloudflare Tunnels, SSH forwarding, and Git.</p></div>
+  </div>
 
-    <footer>
-      &copy; 2026 Alan (alanisdbd046-hash) &bull; Built with semantic HTML &amp; CSS
-    </footer>
-  </main>
+  <h2 id="notes">Engineering Notes</h2>
+  <div class="card">
+    <p><strong>Traversing Carrier CGNAT on ARM64 Linux:</strong> Multiplexing outbound QUIC connections across edge nodes allows serving HTTPS/2 APIs from mobile Linux without router port forwarding.</p>
+    <p style="margin-top:10px"><strong>Single-Host Path Routing:</strong> Consolidating microservice subdomains into unified path-based routing reduces TLS overhead and simplifies local-to-edge testing.</p>
+  </div>
+
+  <h2 id="contact">Contact &amp; Links</h2>
+  <div class="card">
+    <p><strong>GitHub:</strong> <a style="color:#38bdf8" href="https://github.com">https://github.com</a></p>
+    <p><strong>Email:</strong> alanisd046@gmail.com</p>
+  </div>
+
+  <footer>&copy; 2026 Alan (alanisdbd046-hash) &bull; Software Engineering Portfolio</footer>
+
+  <script>
+    const data = {
+      health: 'HTTP/2 200 OK\n{"status":"healthy","db":"mariadb-connected","protocol":"HTTP/2"}',
+      version: 'HTTP/2 200 OK\n{"isValid":true,"version":"2.437.406827","api":"v1"}',
+      auth: 'HTTP/2 200 OK\n{"authenticated":true,"user":"alanisdbd046","role":"engineer"}'
+    };
+    function setEp(k) { document.getElementById('out').textContent = data[k]; }
+    setEp('health');
+  </script>
 </body>
 </html>
